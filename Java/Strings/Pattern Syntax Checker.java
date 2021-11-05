@@ -26,15 +26,16 @@ Invalid
 Invalid
 */
 
-import java.util.Scanner;
-import java.util.regex.*;
 import java.util.*;
-
+import java.util.regex.*;
 public class Solution
 {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        int testCases = Integer.parseInt(in.nextLine());
+        //Scanner sn= new Scanner(System.in);
+        int testCases = in.nextInt();
+        
+        String s=in.nextLine();  //in order to move the cursor or whatever forward
         
         while(testCases>0){
             String pattern = in.nextLine();
@@ -50,4 +51,4 @@ public class Solution
         }
     }
 }
-  
+
