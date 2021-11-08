@@ -56,7 +56,6 @@ public class Solution
                     System.out.print(str.charAt(i));
                 }   
             }
-          
             System.out.print(" ");
             
             for(int i=0;i<str.length();i++){
