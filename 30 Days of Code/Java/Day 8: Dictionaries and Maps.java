@@ -30,5 +30,85 @@ sam=99912222
 Not found
 harry=12299933
 
+*///Complete this code or write your own from scratch
+import java.util.*;
+import java.io.*;
+
+public class Solution{
+    public static void main(String []args){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        String[] names_arr= new String[n];
+        int[] pn_arr = new int[n];
+        String ans="";
+  
+        
+        for(int i = 0; i < n; i++){
+            String name = in.next();
+            int phone = in.nextInt();
+            in.nextLine();
+            // Write code here
+            names_arr[i]=name;
+            pn_arr[i]=phone;
+             
+        }
+        while(in.hasNext()){
+            String s = in.next();
+            for(int j = 0; j<n; j++){
+                boolean b = s.equals(names_arr[j]);
+                if(b){
+                    ans = names_arr[j] + "="+pn_arr[j];
+                    
+                    break;
+                }
+                else{
+                    ans="Not found";
+                    
+                }
+    
+            }
+            System.out.println(ans);
+        }
+        in.close();
+    }
+}
+
+
+
+
+
+
+
+/*
+DOESNT WORK FOR ALL TEST CASES BECAUSE OF TIME LIMIT 
+
+SO SOLUTION CODE:
 */
+
+
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        Map<String,Integer> myMap = new HashMap<String,Integer>(); 
+        for(int i = 0; i < n; i++){
+            String name = in.next();
+            int phone = in.nextInt();
+            in.nextLine();
+            myMap.put(name, phone);
+        }
+        while(in.hasNext()){
+            String s = in.next();
+            if(myMap.get(s) == null)
+                System.out.println("Not found");
+            else {
+                System.out.println(s + "=" + myMap.get(s));
+            }
+        }
+        in.close();
+    }
+}
 
